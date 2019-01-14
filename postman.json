@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "535a7906-4451-4903-a702-04a28bf020f1",
+		"name": "M5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:5000/.well-known/openid-configuration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/.well-known/openid-configuration",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						".well-known",
+						"openid-configuration"
+					]
+				},
+				"description": "localhost:5000/.well-known/openid-configuration"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/connect/token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "sms_code",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "client",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "13000000001",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:5000/connect/token",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"connect",
+						"token"
+					]
+				},
+				"description": "localhost:5001/connect/token"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/user/detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjBiNjVlMjFmYmNjYjdlNjI3ZDY0NWFkMzA0MGNhZTYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDAyMDYyNDAsImV4cCI6MTU0MDIwOTg0MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMS9yZXNvdXJjZXMiLCJhcGkiLCJnYXRld2F5Il0sImNsaWVudF9pZCI6ImNsaWVudCIsInN1YiI6IjVlNWVlMGE2LWJhNDctNDg5Mi1iNTkwLWUwODVmYWQwM2Y4ZiIsImF1dGhfdGltZSI6MTU0MDIwNjI0MCwiaWRwIjoibG9jYWwiLCJwaG9uZSI6IjEzMDAwMDAwMDAxIiwibmFtZSI6IuW8oOS4iSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJhcGkiLCJnYXRld2F5Iiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInNtc19jb2RlIl19.Pd818PrNOHdT7Uu3DrHW9lRQ1_ZKpXulk_OLOKUg6NBHo9TLEeZc1Z5OPPjasmW8t--_Pa1bTWu_lbtdUp9M-FetRlQOp7qOeXyQ_iyapBDa47Q5_U8JCMY7QVpW23l-0V0qTD0yUqjc5lBzbPjRQq_wva04B9lF46OInX_BnnjDFK-13RMuL_kYtCjeBBgESkiC9fC873vVGkyyypWD1jyyrqOcsp0qxUopcE6TabHp-NiA6aLn3UrqXNxzb0SHUsnCPbFFAR40PvV4lK7m_9VkPCDLHxHdclb67yIhmCJtzKCnIHY6CVnXGTfCXOOBIyJRtW1E58OJSGXomMpWCw"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/api/user/detail",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"detail"
+					]
+				},
+				"description": "localhost:5000/api/user/detail"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/user/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjBiNjVlMjFmYmNjYjdlNjI3ZDY0NWFkMzA0MGNhZTYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDAyMDYyNDAsImV4cCI6MTU0MDIwOTg0MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMS9yZXNvdXJjZXMiLCJhcGkiLCJnYXRld2F5Il0sImNsaWVudF9pZCI6ImNsaWVudCIsInN1YiI6IjVlNWVlMGE2LWJhNDctNDg5Mi1iNTkwLWUwODVmYWQwM2Y4ZiIsImF1dGhfdGltZSI6MTU0MDIwNjI0MCwiaWRwIjoibG9jYWwiLCJwaG9uZSI6IjEzMDAwMDAwMDAxIiwibmFtZSI6IuW8oOS4iSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJhcGkiLCJnYXRld2F5Iiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInNtc19jb2RlIl19.Pd818PrNOHdT7Uu3DrHW9lRQ1_ZKpXulk_OLOKUg6NBHo9TLEeZc1Z5OPPjasmW8t--_Pa1bTWu_lbtdUp9M-FetRlQOp7qOeXyQ_iyapBDa47Q5_U8JCMY7QVpW23l-0V0qTD0yUqjc5lBzbPjRQq_wva04B9lF46OInX_BnnjDFK-13RMuL_kYtCjeBBgESkiC9fC873vVGkyyypWD1jyyrqOcsp0qxUopcE6TabHp-NiA6aLn3UrqXNxzb0SHUsnCPbFFAR40PvV4lK7m_9VkPCDLHxHdclb67yIhmCJtzKCnIHY6CVnXGTfCXOOBIyJRtW1E58OJSGXomMpWCw",
+						"disabled": false
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"disabled": false
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"5e5ee0a6-ba47-4892-b590-e085fad03f8f\",\n    \"phone\": \"13000000001\",\n    \"name\": \"张三\",\n    \"properties\": [\n        {\n            \"userId\": \"5e5ee0a6-ba47-4892-b590-e085fad03f8f\",\n            \"key\": \"city\",\n            \"value\": \"gz\",\n            \"title\": \"广州\"\n        }\n    ],\n    \"labels\": [\n        {\n            \"userId\": \"5e5ee0a6-ba47-4892-b590-e085fad03f8f\",\n            \"title\": \"同事\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/user/update",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"update"
+					]
+				},
+				"description": "localhost:5000/api/user/update"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/project/detail?id=",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjBiNjVlMjFmYmNjYjdlNjI3ZDY0NWFkMzA0MGNhZTYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDAyMDYyNDAsImV4cCI6MTU0MDIwOTg0MCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMS9yZXNvdXJjZXMiLCJhcGkiLCJnYXRld2F5Il0sImNsaWVudF9pZCI6ImNsaWVudCIsInN1YiI6IjVlNWVlMGE2LWJhNDctNDg5Mi1iNTkwLWUwODVmYWQwM2Y4ZiIsImF1dGhfdGltZSI6MTU0MDIwNjI0MCwiaWRwIjoibG9jYWwiLCJwaG9uZSI6IjEzMDAwMDAwMDAxIiwibmFtZSI6IuW8oOS4iSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJhcGkiLCJnYXRld2F5Iiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInNtc19jb2RlIl19.Pd818PrNOHdT7Uu3DrHW9lRQ1_ZKpXulk_OLOKUg6NBHo9TLEeZc1Z5OPPjasmW8t--_Pa1bTWu_lbtdUp9M-FetRlQOp7qOeXyQ_iyapBDa47Q5_U8JCMY7QVpW23l-0V0qTD0yUqjc5lBzbPjRQq_wva04B9lF46OInX_BnnjDFK-13RMuL_kYtCjeBBgESkiC9fC873vVGkyyypWD1jyyrqOcsp0qxUopcE6TabHp-NiA6aLn3UrqXNxzb0SHUsnCPbFFAR40PvV4lK7m_9VkPCDLHxHdclb67yIhmCJtzKCnIHY6CVnXGTfCXOOBIyJRtW1E58OJSGXomMpWCw"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/api/project/detail?id=5e6fb0e7-cd86-11e8-a462-206a8a426cc3",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"project",
+						"detail"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5e6fb0e7-cd86-11e8-a462-206a8a426cc3"
+						}
+					]
+				},
+				"description": "localhost:5000/api/project/detail?id="
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/project/create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjBiNjVlMjFmYmNjYjdlNjI3ZDY0NWFkMzA0MGNhZTYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDAyMDczMjQsImV4cCI6MTU0MDIxMDkyNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMS9yZXNvdXJjZXMiLCJhcGkiLCJnYXRld2F5Il0sImNsaWVudF9pZCI6ImNsaWVudCIsInN1YiI6IjVlNWVlMGE2LWJhNDctNDg5Mi1iNTkwLWUwODVmYWQwM2Y4ZiIsImF1dGhfdGltZSI6MTU0MDIwNzMyNCwiaWRwIjoibG9jYWwiLCJwaG9uZSI6IjEzMDAwMDAwMDAxIiwibmFtZSI6IuW8oOS4iSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJhcGkiLCJnYXRld2F5Iiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInNtc19jb2RlIl19.WGxrgfbwuyj6F092aaXd4xVn48Yrd5_rlIquL9QuJhuykwJOW6ecYKxi62ClKF_GUS2PpzowO9YESJtK6E84GUzJBQvEMUzUzKoiOyyHmmBrwOijePwfWaLKPn2_lEEKNNW9j-ucURC-5dcVNdv4_w1wsFycDYHOoF15yZ97guPeqIhYwQcgA_POB4gck0jYTscLA858BLms6rpQmIl5RRyHd2SbJACuJAG3c4S-tGBvxR6SDB_hsplsQF531jRak8yYhvw4EBid-Uo-lCsL23C4PgW_ijLHqK9z7cbt6WbUQAXiwl2N9P0AuZUd2NDz4gazCeO5qdIzKPAa2Q4ksQ"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"项目五\",\n    \"userId\": \"5e5ee0a6-ba47-4892-b590-e085fad03f8f\",\n    \"properties\": [\n        {\n            \"key\": \"city\",\n            \"value\": \"sh\",\n            \"title\": \"上海\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:5000/api/project/create",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"project",
+						"create"
+					]
+				},
+				"description": "localhost:5000/api/project/create"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:5000/api/link/detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjBiNjVlMjFmYmNjYjdlNjI3ZDY0NWFkMzA0MGNhZTYxIiwidHlwIjoiSldUIn0.eyJuYmYiOjE1NDAyMDczMjQsImV4cCI6MTU0MDIxMDkyNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAxIiwiYXVkIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NTAwMS9yZXNvdXJjZXMiLCJhcGkiLCJnYXRld2F5Il0sImNsaWVudF9pZCI6ImNsaWVudCIsInN1YiI6IjVlNWVlMGE2LWJhNDctNDg5Mi1iNTkwLWUwODVmYWQwM2Y4ZiIsImF1dGhfdGltZSI6MTU0MDIwNzMyNCwiaWRwIjoibG9jYWwiLCJwaG9uZSI6IjEzMDAwMDAwMDAxIiwibmFtZSI6IuW8oOS4iSIsInNjb3BlIjpbIm9wZW5pZCIsInByb2ZpbGUiLCJhcGkiLCJnYXRld2F5Iiwib2ZmbGluZV9hY2Nlc3MiXSwiYW1yIjpbInNtc19jb2RlIl19.WGxrgfbwuyj6F092aaXd4xVn48Yrd5_rlIquL9QuJhuykwJOW6ecYKxi62ClKF_GUS2PpzowO9YESJtK6E84GUzJBQvEMUzUzKoiOyyHmmBrwOijePwfWaLKPn2_lEEKNNW9j-ucURC-5dcVNdv4_w1wsFycDYHOoF15yZ97guPeqIhYwQcgA_POB4gck0jYTscLA858BLms6rpQmIl5RRyHd2SbJACuJAG3c4S-tGBvxR6SDB_hsplsQF531jRak8yYhvw4EBid-Uo-lCsL23C4PgW_ijLHqK9z7cbt6WbUQAXiwl2N9P0AuZUd2NDz4gazCeO5qdIzKPAa2Q4ksQ"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "localhost:5000/api/link/detail",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"link",
+						"detail"
+					]
+				},
+				"description": "localhost:5000/api/link/detail"
+			},
+			"response": []
+		}
+	]
+}
